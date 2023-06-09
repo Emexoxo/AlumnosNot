@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Alumnos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script defer src="./index.js"></script>
+</head>
+
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-5  m-1">
+        <form class="form" id='form'>
+          <br>
+          <h2 style="text-align: center;">REGISTRO</h2>
+          <div style="text-align: center;">
+            <input type="text" name="" id="cedula" placeholder="Cedula" maxlength="10"  onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required>
+            <br>
+            <input type="text" name="" id="nombre" placeholder="Nombre del Alumno" maxlength="30" pattern="[a-zA-Z]+"  onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required>
+            <br>
+            <input type="number" name="" id="matematica" placeholder="Nota de Matematica" maxlength="2" required>
+            <br>
+            <input type="text" name="" id="fisica" placeholder="Nota de Fisica" maxlength="2" required>
+            <br>
+            <input type="text" name="" id="programacion" placeholder="Nota de Programacion" maxlength="2"  required>
+          </div>
+            <div class="row-col-6" style="text-align: center;">
+              <br>
+              <button id="btn" class="btn btn-success" onclick="guardarDatos()">Guardar</button>
+              <button id="btn1" class="btn btn-danger" value="borrar" onclick="reset()">Limpiar</button>
+            </div>
+            <br>
+        </form>
+      </div>
+      <div class="col-6 border border-success border border-2 mb-1 mt-1">
+        <h2 style="text-align: center;">Resultados</h2>
+        <div style="text-align: center;">
+          <p id="respuestaMate"></p>
+          <p id="respuestaFis"></p>
+          <p id="respuestaProg"></p>
+          <p id="aprobadosMate"></p>
+          <p id="reprobadosMate"></p>
+          <p id="aprobadosFisica"></p>
+          <p id="reprobadosFisica"></p>
+          <p id="aprobadosProg"></p>
+          <p id="reprobadosProg"></p>
+          <p id="aproboTodas"></p>
+          <p id="aproboDos"></p>
+          <p id="aproboUna"></p>
+          <p id="maxMat"></p>
+          <p id="maxFis"></p>
+          <p id="maxProg"></p>
+        </div>
+          
+      </div>
+    </div>
+  </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
